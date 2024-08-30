@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk"
+    tools:context=".login.LoginActivity">
+
+    <TextView
+        android:id="@+id/loginTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:text="login"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginTv"
+        android:layout_margin="10dp"
+        android:background="#30ffffff"
+        android:drawableStart="@drawable/username"
+        android:drawablePadding="10dp"
+        android:hint="@string/username"
+        android:inputType="textPersonName"
+        android:padding="20dp"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/edPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edUser"
+        android:layout_margin="10dp"
+        android:background="#30ffffff"
+        android:drawableStart="@drawable/password"
+        android:drawablePadding="10dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textColorHint="@color/black" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edPass"
+        android:layout_centerInParent="true"
+        android:onClick="login"
+        android:text="LOGIN" />
+
+    <Button
+        android:id="@+id/createUsrBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginBtn"
+        android:layout_centerInParent="true"
+        android:onClick="createUser"
+        android:text="CREATE" />
+
+</RelativeLayout>

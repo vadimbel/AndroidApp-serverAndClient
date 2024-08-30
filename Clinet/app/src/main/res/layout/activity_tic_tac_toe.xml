@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- First LinearLayout to hold the TextView elements -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- First TextView for the first username -->
+        <TextView
+            android:id="@+id/firstUsernameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Username"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            android:gravity="start"/>
+
+        <!-- Second TextView for the second username -->
+        <TextView
+            android:id="@+id/secondUsernameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Second Username"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            android:gravity="end"/>
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:background="@android:color/black"
+        android:padding="1dp">
+
+        <TextView
+            android:id="@+id/cell_00"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/cell_border"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:onClick="clickZero"
+            android:contentDescription="Cell 00"/>
+
+        <TextView
+            android:id="@+id/cell_01"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/cell_border"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:onClick="clickOne"
+            android:contentDescription="Cell 01"/>
+
+        <TextView
+            android:id="@+id/cell_02"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/cell_border"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:onClick="clickTwo"
+            android:contentDescription="Cell 02"/>
+
+        <TextView
+            android:id="@+id/cell_10"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/cell_border"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:onClick="clickThree"
+            android:contentDescription="Cell 10"/>
+
+        <TextView
+            android:id="@+id/cell_11"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/cell_border"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:onClick="clickFour"
+            android:contentDescription="Cell 11"/>
+
+        <TextView
+            android:id="@+id/cell_12"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/cell_border"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:onClick="clickFive"
+            android:contentDescription="Cell 12"/>
+
+        <TextView
+            android:id="@+id/cell_20"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/cell_border"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:onClick="clickSix"
+            android:contentDescription="Cell 20"/>
+
+        <TextView
+            android:id="@+id/cell_21"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/cell_border"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:onClick="clickSeven"
+            android:contentDescription="Cell 21"/>
+
+        <TextView
+            android:id="@+id/cell_22"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/cell_border"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:onClick="clickEight"
+            android:contentDescription="Cell 22"/>
+
+    </GridLayout>
+
+    <!-- Buttons for draw and forfeit -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/button_forfeit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forfeit"
+            android:padding="8dp"
+            android:onClick="forfeit"
+            android:background="@android:color/black"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/playersTurn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TURN : "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            android:gravity="start"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+

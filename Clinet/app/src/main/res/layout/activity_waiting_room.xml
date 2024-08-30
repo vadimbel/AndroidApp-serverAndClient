@@ -1,0 +1,28 @@
+<!-- res/layout/activity_waiting_room.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/bk">
+
+    <TextView
+        android:id="@+id/waiting_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Waiting for an opponent..."
+        android:textSize="18sp"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/waiting_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Cancel"
+        android:onClick="cancelGame"/>
+
+</RelativeLayout>
